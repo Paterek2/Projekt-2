@@ -1,0 +1,87 @@
+.tabulka1{
+    width: 100%;
+    border-collapse: collapse;
+    counter-reset: cislovani;
+}
+th, td{
+    text-align: left;
+    padding: 10px;
+}
+tr:nth-child(2n){
+    background-color: lightgray;
+}
+tr:nth-child(2n+1){
+    background-color: gray;
+}
+tr:hover:not(:first-child){
+    background-color: darkgray;
+    color: white;
+}
+.scroll{
+    overflow-x: auto;
+}
+th:nth-child(n+3)::after{
+    counter-increment: cislovani;
+    content: ":" counter(cislovani, upper-roman);
+}
+.domecek{
+    fill: none;
+    stroke: black;
+    stroke-width: 5px;
+}
+.modra{
+    fill: blue;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+.bila{
+    fill: white;
+    stroke: black;
+    stroke-width: 0,5px;
+}
+.cervena{
+    fill: red;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+.modra{
+    fill: #006aa8;
+}
+.svisla{
+    fill: #fecd00;
+    stroke-width: 25px;
+}
+.sipka{
+    fill: red;
+    stroke:limegreen;
+    stroke-width: 2px;
+}
+.sipka:hover{
+    stroke: red;
+    fill: limegreen;
+}
+.svg{
+    float: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+.tabulka2{
+    width: 80%;
+    height: 80%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.tr2,.td2{
+    border: 1px solid black;
+    height: 80px;
+    color: transparent;
+}
+.tr2:nth-child(2n) .td2:nth-child(2n),
+.tr2:nth-child(2n+1) .td2:nth-child(2n+1) {
+    background: rgb(255, 0, 0);
+}
+.tr2:nth-child(2n+1) .td2:nth-child(2n+1),
+.tr2:nth-child(2n) .td2:nth-child(2n) {
+    background: rgb(0, 0, 0);
+}
